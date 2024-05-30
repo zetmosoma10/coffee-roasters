@@ -1,9 +1,9 @@
-import Button from "./components/Button";
+import HowItWork from "./sections/HowItWork";
 
 function App() {
   return (
-    <div className="m-10">
-      <Button>Create your plan</Button>
+    <div className="m-5">
+      <HowItWork />
     </div>
   );
 }
