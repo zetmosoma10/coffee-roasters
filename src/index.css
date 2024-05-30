@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #fefcf7;
+  }
   h1,
   h2,
   h3,
