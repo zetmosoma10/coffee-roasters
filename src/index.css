@@ -18,4 +18,8 @@
   p {
     font-family: "Barlow", "sans-serif";
   }
+
+  .gradient-text {
+    background: linear-gradient(#83888f, #fefcf7);
+  }
 }

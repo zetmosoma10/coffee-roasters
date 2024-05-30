@@ -1,3 +1,8 @@
+import granEspresso from "./assets/home/desktop/image-gran-espresso.png";
+import planalto from "./assets/home/desktop/image-planalto.png";
+import piccollo from "./assets/home/desktop/image-piccollo.png";
+import danche from "./assets/home/desktop/image-danche.png";
+
 export const dataProcedure = [
   {
     step: "01",
@@ -13,5 +18,28 @@ export const dataProcedure = [
     step: "03",
     header: "Receive and enjoy!",
     text: "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
+  },
+];
+
+export const collectionData = [
+  {
+    img: granEspresso,
+    header: "Gran Espresso",
+    text: "Light and flavorful blend with cocoa and black pepper for an intense experience",
+  },
+  {
+    img: planalto,
+    header: "Planalto",
+    text: "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
+  },
+  {
+    img: piccollo,
+    header: "Piccollo",
+    text: "Mild and smooth blend featuring notes of toasted almond and dried cherry ",
+  },
+  {
+    img: danche,
+    header: "Danche",
+    text: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
   },
 ];
