@@ -1,9 +1,9 @@
-import Collections from "./sections/Collections";
+import CardWhyChosseUs from "./components/CardWhyChosseUs";
 
 function App() {
   return (
     <div className="m-5">
-      <Collections />
+      <CardWhyChosseUs />
     </div>
   );
 }

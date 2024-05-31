@@ -18,7 +18,7 @@ const Collections = () => {
             <img className="w-full" src={card.img} />
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold">{card.header}</h3>
-              <p className="text-sm lg:text-base mt-4">{card.text}</p>
+              <p className=" text-sm lg:text-base mt-4">{card.text}</p>
             </div>
           </div>
         ))}
