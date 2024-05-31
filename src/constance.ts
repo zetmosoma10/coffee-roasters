@@ -2,6 +2,9 @@ import granEspresso from "./assets/home/desktop/image-gran-espresso.png";
 import planalto from "./assets/home/desktop/image-planalto.png";
 import piccollo from "./assets/home/desktop/image-piccollo.png";
 import danche from "./assets/home/desktop/image-danche.png";
+import coffeeBean from "./assets/home/desktop/icon-coffee-bean.svg";
+import gift from "./assets/home/desktop/icon-gift.svg";
+import truck from "./assets/home/desktop/icon-truck.svg";
 
 export const dataProcedure = [
   {
@@ -41,5 +44,23 @@ export const collectionData = [
     img: danche,
     header: "Danche",
     text: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
+  },
+];
+
+export const whyChooseUsData = [
+  {
+    icon: coffeeBean,
+    header: "Best quality",
+    text: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
+  },
+  {
+    icon: gift,
+    header: "Exclusive benefits",
+    text: "Special offers and swag when you subscribe, including 30% off your first shipment.",
+  },
+  {
+    icon: truck,
+    header: "Free shipping",
+    text: "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
   },
 ];
