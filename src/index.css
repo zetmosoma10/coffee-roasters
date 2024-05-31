@@ -5,8 +5,15 @@
 @tailwind utilities;
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
   body {
     background-color: #fefcf7;
+    margin: 0;
+    padding: 0;
   }
   h1,
   h2,
@@ -25,5 +32,18 @@
 
   .max-container {
     @apply max-w-[1280px] w-[90%] mx-auto;
+  }
+
+  .hero {
+    background-image: url("./assets/home/mobile/image-hero-coffeepress.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
+
+  @media screen and (min-width: 768px) {
+    .hero {
+      background-image: url("./assets/home/tablet/image-hero-coffeepress.jpg");
+    }
   }
 }
