@@ -4,11 +4,11 @@ import Footer from "../components/Footer";
 
 const Layout = () => {
   return (
-    <>
+    <div className="max-container">
       <NavBar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

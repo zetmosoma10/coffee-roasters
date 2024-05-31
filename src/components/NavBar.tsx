@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-between py-10 max-container">
+    <nav className="flex justify-between py-10">
       <Link to="/">
         <Logo color="#333D4B" />
       </Link>

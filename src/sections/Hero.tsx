@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 const Hero = () => {
   return (
-    <div className="max-container rounded-[10px] hero flex items-center justify-center md:justify-start text-light_cream py-24 md:py-28">
+    <div className=" rounded-[10px] hero flex items-center justify-center md:justify-start text-light_cream py-24 md:py-28">
       <div
         className="text-center md:text-left mx-6 md:ml-14 md:mr-0 lg:ml-20
         md:max-w-[410px] lg:max-w-[500px]"

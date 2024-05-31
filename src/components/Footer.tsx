@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-      className="max-container flex flex-col lg:flex-row lg:justify-between  items-center 
+      className=" flex flex-col lg:flex-row lg:justify-between  items-center 
         p-14 lg:py-12 lg:px-6 bg-dark_grey text-light_cream rounded-[10px] mb-[72px]"
     >
       <div className="lg:flex lg:items-center lg:space-x-24">

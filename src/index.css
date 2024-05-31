@@ -46,4 +46,17 @@
       background-image: url("./assets/home/tablet/image-hero-coffeepress.jpg");
     }
   }
+
+  .about-hero {
+    background-image: url("./assets/about/desktop/image-hero-whitecup.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
+
+  @media screen and (min-width: 768px) {
+    .about-hero {
+      background-image: url("./assets/about/tablet/image-hero-whitecup.jpg");
+    }
+  }
 }
