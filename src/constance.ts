@@ -5,6 +5,9 @@ import danche from "./assets/home/desktop/image-danche.png";
 import coffeeBean from "./assets/home/desktop/icon-coffee-bean.svg";
 import gift from "./assets/home/desktop/icon-gift.svg";
 import truck from "./assets/home/desktop/icon-truck.svg";
+import uk from "./assets/about/desktop/illustration-uk.svg";
+import canada from "./assets/about/desktop/illustration-canada.svg";
+import australia from "./assets/about/desktop/illustration-australia.svg";
 
 export const dataProcedure = [
   {
@@ -62,5 +65,28 @@ export const whyChooseUsData = [
     icon: truck,
     header: "Free shipping",
     text: "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
+  },
+];
+
+export const headquartersData = [
+  {
+    img: uk,
+    name: "United Kingdom",
+    address: ["68 Asfordby Rd", "Alcaston", "SY6 1YA", "+44 1241918425"],
+  },
+  {
+    img: canada,
+    name: "Canada",
+    address: [
+      "1528  Eglinton Avenue",
+      "Toronto",
+      "Ontario M4P 1A6",
+      "+1 416 485 2997",
+    ],
+  },
+  {
+    img: australia,
+    name: "Australia",
+    address: ["36 Swanston Street", "Kewell", "Victoria", "+61 4 9928 3629"],
   },
 ];
