@@ -5,7 +5,7 @@ import QualityCard from "../sections/about/QualityCard";
 
 const About = () => {
   return (
-    <>
+    <div className="max-container">
       <AboutInfo />
       <div className="mt-32 mb-44 md:mt-36 md:mb-36 lg:mt-40 lg:mb-44">
         <CommitmentCard />
@@ -16,7 +16,7 @@ const About = () => {
       <div className="mt-32 mb-32 md:mt-36 md:mb-36 lg:mt-40 lg:mb-40">
         <Headquarters />
       </div>
-    </>
+    </div>
   );
 };
 

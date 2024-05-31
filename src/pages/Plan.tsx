@@ -1,9 +1,9 @@
-import PlanHero from "../sections/plan/PlanHero";
+import HowItWorkDark from "../sections/plan/HowItWorkDark";
 
 const Plan = () => {
   return (
     <div>
-      <PlanHero />
+      <HowItWorkDark />
     </div>
   );
 };
