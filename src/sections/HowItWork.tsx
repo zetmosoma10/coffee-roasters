@@ -3,7 +3,7 @@ import { dataProcedure } from "../constance";
 
 const HowItWork = () => {
   return (
-    <section className="text-center md:text-left">
+    <section className="max-container text-center md:text-left ">
       <h2 className="text-grey text-2xl">How it works</h2>
       <div className="grid gap-y-14 md:grid-cols-3 mt-[80px]">
         {dataProcedure.map((card) => (

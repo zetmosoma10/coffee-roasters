@@ -9,7 +9,7 @@ const CardWhyChooseUs = ({ icon, header, text }: Props) => {
     <div
       className="flex flex-col items-center gap-14  md:flex-row md:items-center 
       md:gap-12 lg:flex-col bg-dark_cyan text-light_cream py-12 px-3 md:py-10 md:px-12 
-       rounded-lg "
+       rounded-lg"
     >
       <img src={icon} alt="" />
       <div className="text-center md:text-left lg:text-center w-[75%] lg:w-full">

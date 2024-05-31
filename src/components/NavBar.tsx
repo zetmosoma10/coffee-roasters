@@ -1,30 +1,33 @@
 import Logo from "./Logo";
 import hamburgerIcon from "../assets/shared/mobile/icon-hamburger.svg";
 import closeIcon from "../assets/shared/mobile/icon-close.svg";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="flex justify-between py-10 max-container">
-      <Logo color="#333D4B" />
+      <Link to="/">
+        <Logo color="#333D4B" />
+      </Link>
       <img src={hamburgerIcon} className="md:hidden w-[24px] cursor-pointer" />
       <ul
         className="hidden md:flex md:items-center md:space-x-6 text-center text-[12px] tracking-[0.92px] 
              lg:space-x-8 text-grey uppercase font-bold"
       >
         <li>
-          <a className="font-barlow hover:text-dark_grey" href="#">
+          <Link to="/" className="font-barlow hover:text-dark_grey">
             home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="font-barlow hover:text-dark_grey" href="#">
+          <Link to="about" className="font-barlow hover:text-dark_grey">
             about us
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="font-barlow hover:text-dark_grey" href="#">
+          <Link to="plan" className="font-barlow hover:text-dark_grey">
             create your plan
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
