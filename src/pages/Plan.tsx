@@ -1,5 +1,11 @@
+import PlanHero from "../sections/plan/PlanHero";
+
 const Plan = () => {
-  return <div>Plan</div>;
+  return (
+    <div>
+      <PlanHero />
+    </div>
+  );
 };
 
 export default Plan;

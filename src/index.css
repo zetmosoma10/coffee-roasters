@@ -74,4 +74,24 @@
     background-size: cover;
     background-color: #333d4b;
   }
+
+  /* PLAN HERO IMG */
+  .plan-hero {
+    background-image: url("./assets/plan/mobile/image-hero-blackcup.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
+
+  @media screen and (min-width: 768px) {
+    .plan-hero {
+      background-image: url("./assets/plan/tablet/image-hero-blackcup.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .plan-hero {
+      background-image: url("./assets/plan/desktop/image-hero-blackcup.jpg");
+    }
+  }
 }
