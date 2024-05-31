@@ -1,9 +1,9 @@
-import AboutInfo from "../sections/about/AboutInfo";
+import CommitmentCard from "../sections/about/CommitmentCard";
 
 const About = () => {
   return (
     <div>
-      <AboutInfo />
+      <CommitmentCard />
     </div>
   );
 };

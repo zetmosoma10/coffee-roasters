@@ -34,6 +34,7 @@
     @apply max-w-[1280px] w-[90%] mx-auto;
   }
 
+  /* Hero BG Image */
   .hero {
     background-image: url("./assets/home/mobile/image-hero-coffeepress.jpg");
     background-position: center;
@@ -47,8 +48,9 @@
     }
   }
 
+  /* ABOUT HERO IMG */
   .about-hero {
-    background-image: url("./assets/about/desktop/image-hero-whitecup.jpg");
+    background-image: url("./assets/about/mobile/image-hero-whitecup.jpg");
     background-position: center;
     background-size: cover;
     background-color: #333d4b;
@@ -57,6 +59,12 @@
   @media screen and (min-width: 768px) {
     .about-hero {
       background-image: url("./assets/about/tablet/image-hero-whitecup.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .about-hero {
+      background-image: url("./assets/about/desktop/image-hero-whitecup.jpg");
     }
   }
 }
