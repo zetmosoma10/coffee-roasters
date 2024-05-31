@@ -1,9 +1,9 @@
-import WhyChooseUs from "./sections/WhyChooseUs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="m-5">
-      <WhyChooseUs />
+    <div>
+      <Footer />
     </div>
   );
 }
