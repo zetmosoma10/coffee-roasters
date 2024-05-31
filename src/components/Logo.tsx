@@ -2,7 +2,7 @@ interface Props {
   color?: string;
 }
 // #0E8784
-// #333D4BP
+//
 
 const Logo = ({ color = "#FEFCF7" }: Props) => {
   return (

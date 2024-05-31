@@ -13,7 +13,8 @@ const Footer = () => {
         <Logo />
         <ul
           className=" text-center text-[12px] tracking-[0.92px] mt-12 lg:mt-0 
-            space-y-6 lg:space-y-0 lg:space-x-8 lg:flex lg:items-center text-grey uppercase font-bold"
+            space-y-6 lg:space-y-0 lg:space-x-8 lg:flex lg:items-center
+           text-grey uppercase font-bold"
         >
           <li>
             <a className="font-barlow hover:text-light_cream" href="#">

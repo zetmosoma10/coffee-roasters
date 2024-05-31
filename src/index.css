@@ -22,4 +22,8 @@
   .gradient-text {
     background: linear-gradient(#83888f, #fefcf7);
   }
+
+  .max-container {
+    @apply max-w-[1280px] w-[90%] mx-auto;
+  }
 }
