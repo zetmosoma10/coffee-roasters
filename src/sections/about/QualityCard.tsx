@@ -4,7 +4,7 @@ import desktopImg from "../../assets/about/desktop/image-quality.jpg";
 
 const QualityCard = () => {
   return (
-    <div className="relative quality-img bg-dark_grey text-light_cream m-5 rounded-[10px] m-20">
+    <div className="relative quality-img bg-dark_grey text-light_cream  rounded-[10px] ">
       <div
         className="relative bottom-20 grid lg:grid-cols-2 w-[90%] 
         mx-auto gap-y-16 lg:gap-x-14 text-center lg:text-left mb-10 lg:mb-0"
