@@ -67,4 +67,11 @@
       background-image: url("./assets/about/desktop/image-hero-whitecup.jpg");
     }
   }
+
+  .quality-img {
+    background-image: url("./assets/about/mobile/bg-quality.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
 }

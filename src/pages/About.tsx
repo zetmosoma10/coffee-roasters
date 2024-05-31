@@ -1,10 +1,10 @@
-import Headquarters from "../sections/about/Headquarters";
+import QualityCard from "../sections/about/QualityCard";
 
 const About = () => {
   return (
-    <div>
-      <Headquarters />
-    </div>
+    <>
+      <QualityCard />
+    </>
   );
 };
 
