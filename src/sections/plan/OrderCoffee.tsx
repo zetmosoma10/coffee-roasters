@@ -5,8 +5,13 @@ import Input from "./Input";
 const OrderCoffee = () => {
   const [questionsData, setQuestionsData] = useState(coffeeQuestions);
   const [coffeeData, setCoffeeData] = useState({
-    drinkType: "",
+    preferences: "",
+    beanType: "",
+    quantity: "",
+    grindOption: "",
+    deliveries: "",
   });
+  console.log(coffeeData);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -47,7 +52,7 @@ const OrderCoffee = () => {
                     handleChange={handleChange}
                     inputName={data.type}
                     inputValue={data.answer}
-                    checked={coffeeData.drinkType === data.answer}
+                    checked={coffeeData[data.type] === data.answer}
                   />
                 ))}
               </div>
