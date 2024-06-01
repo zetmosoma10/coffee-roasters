@@ -1,5 +1,6 @@
 import { useState } from "react";
 import downArrow from "../../assets/plan/desktop/icon-arrow.svg";
+import Input from "./Input";
 
 const OrderCoffee = () => {
   const [open, setOpen] = useState(false);
@@ -36,39 +37,24 @@ const OrderCoffee = () => {
           </div>
           {open && (
             <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-1">
-                <input
-                  onChange={handleChange}
-                  value="capsule"
-                  type="radio"
-                  name="drinkType"
-                  id="capsule"
-                  checked={coffeeData.drinkType === "capsule"}
-                />
-                <label htmlFor="capsule">Capsule</label>
-              </div>
-              <div className="flex items-center space-x-1">
-                <input
-                  onChange={handleChange}
-                  value="filter"
-                  type="radio"
-                  name="drinkType"
-                  id="filter"
-                  checked={coffeeData.drinkType === "filter"}
-                />
-                <label htmlFor="filter">Filter</label>
-              </div>
-              <div className="flex items-center space-x-1">
-                <input
-                  onChange={handleChange}
-                  value="expresso"
-                  type="radio"
-                  name="drinkType"
-                  id="expresso"
-                  checked={coffeeData.drinkType === "expresso"}
-                />
-                <label htmlFor="expresso">Expresso</label>
-              </div>
+              <Input
+                handleChange={handleChange}
+                inputName="drinkType"
+                inputValue="capsule"
+                checked={coffeeData.drinkType === "capsule"}
+              />
+              <Input
+                handleChange={handleChange}
+                inputName="drinkType"
+                inputValue="filter"
+                checked={coffeeData.drinkType === "filter"}
+              />
+              <Input
+                handleChange={handleChange}
+                inputName="drinkType"
+                inputValue="expresso"
+                checked={coffeeData.drinkType === "expresso"}
+              />
             </div>
           )}
         </div>
