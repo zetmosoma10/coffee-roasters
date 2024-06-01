@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="max-container">
         <NavBar />
       </div>
