@@ -8,6 +8,7 @@ import truck from "./assets/home/desktop/icon-truck.svg";
 import uk from "./assets/about/desktop/illustration-uk.svg";
 import canada from "./assets/about/desktop/illustration-canada.svg";
 import australia from "./assets/about/desktop/illustration-australia.svg";
+import arrowDown from "./assets/plan/desktop/icon-arrow.svg";
 
 export const dataProcedure = [
   {
@@ -88,5 +89,58 @@ export const headquartersData = [
     img: australia,
     name: "Australia",
     address: ["36 Swanston Street", "Kewell", "Victoria", "+61 4 9928 3629"],
+  },
+];
+
+export const coffeeQuestions = [
+  {
+    question: "How do you drink your coffee?",
+    icon: arrowDown,
+    isOpen: false,
+    answers: [
+      { type: "preferences", answer: "capsule" },
+      { type: "preferences", answer: "filter" },
+      { type: "preferences", answer: "expresso" },
+    ],
+  },
+  {
+    question: "What type of coffee?",
+    icon: arrowDown,
+    isOpen: false,
+    answers: [
+      { type: "beanType", answer: "Single Origin" },
+      { type: "beanType", answer: "Decaf" },
+      { type: "beanType", answer: "Blended" },
+    ],
+  },
+  {
+    question: "How much would you like?",
+    icon: arrowDown,
+    isOpen: false,
+    answers: [
+      { type: "quantity", answer: "250g" },
+      { type: "quantity", answer: "500g" },
+      { type: "quantity", answer: "1000g" },
+    ],
+  },
+  {
+    question: "Want us to grind them?",
+    icon: arrowDown,
+    isOpen: false,
+    answers: [
+      { type: "grindOption", answer: "Wholebean" },
+      { type: "grindOption", answer: "Filter" },
+      { type: "grindOption", answer: "Cafetiére" },
+    ],
+  },
+  {
+    question: "How often should we deliver?",
+    icon: arrowDown,
+    isOpen: false,
+    answers: [
+      { type: "deliveries", answer: "Every week" },
+      { type: "deliveries", answer: "Every 2 weeks" },
+      { type: "deliveries", answer: "Every month" },
+    ],
   },
 ];

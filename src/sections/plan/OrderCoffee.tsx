@@ -1,13 +1,12 @@
 import { useState } from "react";
-import downArrow from "../../assets/plan/desktop/icon-arrow.svg";
+import { coffeeQuestions } from "../../constance";
 import Input from "./Input";
 
 const OrderCoffee = () => {
-  const [open, setOpen] = useState(false);
+  const [questionsData, setQuestionsData] = useState(coffeeQuestions);
   const [coffeeData, setCoffeeData] = useState({
     drinkType: "",
   });
-  console.log(coffeeData);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -18,46 +17,43 @@ const OrderCoffee = () => {
     });
   };
 
-  const handleToggle = () => {
-    setOpen(!open);
+  const handleToggle = (index: number) => {
+    return setQuestionsData((prevQuestionsData) => {
+      return prevQuestionsData.map((question, indx) =>
+        indx === index ? { ...question, isOpen: !question.isOpen } : question
+      );
+    });
   };
 
   return (
     <div className="max-container grid ">
       <form className="m-10">
-        <div>
-          <div
-            onClick={handleToggle}
-            className="flex items-center justify-between"
-          >
-            <h3 className="font-bold text-grey text-2xl md:text-3xl lg:text-4xl cursor-pointer">
-              How do you drink your coffee?
-            </h3>
-            <img src={downArrow} alt="" />
-          </div>
-          {open && (
-            <div className="flex items-center space-x-3">
-              <Input
-                handleChange={handleChange}
-                inputName="drinkType"
-                inputValue="capsule"
-                checked={coffeeData.drinkType === "capsule"}
-              />
-              <Input
-                handleChange={handleChange}
-                inputName="drinkType"
-                inputValue="filter"
-                checked={coffeeData.drinkType === "filter"}
-              />
-              <Input
-                handleChange={handleChange}
-                inputName="drinkType"
-                inputValue="expresso"
-                checked={coffeeData.drinkType === "expresso"}
-              />
+        {questionsData.map((item, index) => (
+          <div key={item.question}>
+            <div
+              onClick={() => handleToggle(index)}
+              className="flex items-center justify-between"
+            >
+              <h3 className="font-bold text-grey text-2xl md:text-3xl lg:text-4xl cursor-pointer">
+                {item.question}
+              </h3>
+              <img src={item.icon} alt="" />
             </div>
-          )}
-        </div>
+            {item.isOpen && (
+              <div className="flex items-center space-x-3">
+                {item.answers.map((data) => (
+                  <Input
+                    key={data.answer}
+                    handleChange={handleChange}
+                    inputName={data.type}
+                    inputValue={data.answer}
+                    checked={coffeeData.drinkType === data.answer}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </form>
     </div>
   );
