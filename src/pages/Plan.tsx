@@ -1,9 +1,10 @@
-import HowItWorkDark from "../sections/plan/HowItWorkDark";
+// import HowItWorkDark from "../sections/plan/HowItWorkDark";
+import OrderCoffee from "../sections/plan/OrderCoffee";
 
 const Plan = () => {
   return (
-    <div>
-      <HowItWorkDark />
+    <div className="max-container">
+      <OrderCoffee />
     </div>
   );
 };

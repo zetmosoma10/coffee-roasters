@@ -9,7 +9,9 @@ const Layout = () => {
         <NavBar />
       </div>
       <Outlet />
-      <Footer />
+      <div className="max-container">
+        <Footer />
+      </div>
     </div>
   );
 };
