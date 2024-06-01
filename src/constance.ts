@@ -98,9 +98,9 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "preferences", answer: "capsule" },
-      { type: "preferences", answer: "filter" },
-      { type: "preferences", answer: "expresso" },
+      { type: "preferences", answer: "Capsule" },
+      { type: "preferences", answer: "Filter" },
+      { type: "preferences", answer: "Expresso" },
     ],
   },
   {

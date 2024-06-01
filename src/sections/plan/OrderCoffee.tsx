@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { coffeeQuestions } from "../../constance";
+import OrderSummary from "./OrderSummary";
 import Input from "./Input";
 
 const OrderCoffee = () => {
@@ -11,7 +12,6 @@ const OrderCoffee = () => {
     grindOption: "",
     deliveries: "",
   });
-  console.log(coffeeData);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -34,7 +34,7 @@ const OrderCoffee = () => {
     <div className="max-container grid ">
       <form className="m-10">
         {questionsData.map((item, index) => (
-          <div key={item.question}>
+          <div key={item.question} className="mb-24 md:mb-[100px] lg:mb-20">
             <div
               onClick={() => handleToggle(index)}
               className="flex items-center justify-between"
@@ -42,7 +42,11 @@ const OrderCoffee = () => {
               <h3 className="font-bold text-grey text-2xl md:text-3xl lg:text-4xl cursor-pointer">
                 {item.question}
               </h3>
-              <img src={item.icon} alt="" />
+              <img
+                className={`${item.isOpen && "rotate-180"}`}
+                src={item.icon}
+                alt=""
+              />
             </div>
             {item.isOpen && (
               <div className="flex items-center space-x-3">
@@ -59,6 +63,7 @@ const OrderCoffee = () => {
             )}
           </div>
         ))}
+        <OrderSummary coffeeData={coffeeData} />
       </form>
     </div>
   );
