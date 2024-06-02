@@ -1,10 +1,10 @@
 interface Props {
   coffeeData: {
-    preferences: "";
-    beanType: "";
-    quantity: "";
-    grindOption: "";
-    deliveries: "";
+    preferences: string;
+    beanType: string;
+    quantity: string;
+    grindOption: string;
+    deliveries: string;
   };
 }
 

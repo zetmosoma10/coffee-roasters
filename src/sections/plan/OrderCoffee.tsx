@@ -43,6 +43,12 @@ const OrderCoffee = () => {
     });
   };
 
+  const validateForm = () => {
+    const coffeeValues = Object.values(coffeeData);
+    const checkFalsyValues = coffeeValues.some((item) => item === "");
+    return checkFalsyValues;
+  };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
 
@@ -102,7 +108,11 @@ const OrderCoffee = () => {
           ))}
           <OrderSummary coffeeData={coffeeData} />
           <div className="flex justify-center lg:justify-end mt-14 md:mt-10">
-            <Button onClick={setModalOn} type="button">
+            <Button
+              disabled={validateForm()}
+              onClick={setModalOn}
+              type="button"
+            >
               Create your plan
             </Button>
           </div>
