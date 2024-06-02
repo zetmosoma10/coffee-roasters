@@ -4,7 +4,6 @@ import OrderSummary from "./OrderSummary";
 import Input from "./Input";
 import Button from "../../components/Button";
 import Modal from "./Modal";
-import { TbRuler } from "react-icons/tb";
 import ListFormStats from "./ListFormStats";
 
 const OrderCoffee = () => {
@@ -69,7 +68,7 @@ const OrderCoffee = () => {
         </div>
       )}
       <div className=" grid lg:grid-custom gap-x-10">
-        <ListFormStats />
+        <ListFormStats coffeeData={coffeeData} />
         <form onSubmit={handleSubmit}>
           {questionsData.map((item, index) => (
             <div key={item.question} className="mb-24 md:mb-[100px] lg:mb-20">

@@ -21,7 +21,7 @@ const Modal = ({ coffeeData, setModalOff, resetFormData }: Props) => {
   return (
     <div
       className="max-container rounded-[10px] overflow-hidden  bg-white 
-      fixed top-[100px] left-0 right-0  mx-auto max-w-[540px]"
+      fixed top-[100px] left-0 right-0  mx-auto max-w-[540px] z-10"
     >
       <header className="bg-dark_grey text-light_cream py-7 px-6">
         <h2 className="font-bold text-3xl">Order Summary</h2>
