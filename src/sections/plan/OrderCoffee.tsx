@@ -4,8 +4,10 @@ import OrderSummary from "./OrderSummary";
 import Input from "./Input";
 import Button from "../../components/Button";
 import Modal from "./Modal";
+import { TbRuler } from "react-icons/tb";
 
 const OrderCoffee = () => {
+  const [modalToggle, setModalToggle] = useState(false);
   const [questionsData, setQuestionsData] = useState(coffeeQuestions);
   const [coffeeData, setCoffeeData] = useState({
     preferences: "",
@@ -14,6 +16,24 @@ const OrderCoffee = () => {
     grindOption: "",
     deliveries: "",
   });
+
+  const setModalOn = () => {
+    setModalToggle(true);
+  };
+
+  const setModalOff = () => {
+    setModalToggle(false);
+  };
+
+  const resetFormData = () => {
+    setCoffeeData({
+      preferences: "",
+      beanType: "",
+      quantity: "",
+      grindOption: "",
+      deliveries: "",
+    });
+  };
 
   const handleToggle = (index: number) => {
     return setQuestionsData((prevQuestionsData) => {
@@ -34,14 +54,19 @@ const OrderCoffee = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(coffeeData);
   };
 
   return (
     <div className="max-container grid border border-red-500">
-      <div className="fixed top-[100px] left-0 right-0 bottom-[0]  mx-auto max-w-[540px]">
-        <Modal coffeeData={coffeeData} />
-      </div>
+      {modalToggle && (
+        <div className="absolute modal top-0 left-0 w-full h-full">
+          <Modal
+            resetFormData={resetFormData}
+            setModalOff={setModalOff}
+            coffeeData={coffeeData}
+          />
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="m-10 border">
         {questionsData.map((item, index) => (
           <div key={item.question} className="mb-24 md:mb-[100px] lg:mb-20">
@@ -75,7 +100,9 @@ const OrderCoffee = () => {
         ))}
         <OrderSummary coffeeData={coffeeData} />
         <div className="flex justify-center lg:justify-end mt-14 md:mt-10">
-          <Button type="button">Create your plan</Button>
+          <Button onClick={setModalOn} type="button">
+            Create your plan
+          </Button>
         </div>
       </form>
     </div>

@@ -8,11 +8,21 @@ interface Props {
     grindOption: string;
     deliveries: string;
   };
+  setModalOff: () => void;
+  resetFormData: () => void;
 }
 
-const Modal = ({ coffeeData }: Props) => {
+const Modal = ({ coffeeData, setModalOff, resetFormData }: Props) => {
+  const handleClick = () => {
+    setModalOff();
+    resetFormData();
+  };
+
   return (
-    <div className="max-container rounded-4  bg-white">
+    <div
+      className="max-container rounded-[10px] overflow-hidden  bg-white 
+      fixed top-[100px] left-0 right-0  mx-auto max-w-[540px]"
+    >
       <header className="bg-dark_grey text-light_cream py-7 px-6">
         <h2 className="font-bold text-3xl">Order Summary</h2>
       </header>
@@ -49,7 +59,7 @@ const Modal = ({ coffeeData }: Props) => {
           <span className="font-fraunces font-bold text-2xl lg:text-3xl ">
             $14.00 / mo
           </span>
-          <Button className="py-4 px-7 leading-6" type="button">
+          <Button onClick={handleClick} className="py-4 px-7" type="button">
             Checkout
           </Button>
         </div>
