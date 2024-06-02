@@ -6,13 +6,13 @@ const PlanHero = () => {
     >
       <div className="md:max-w-[398px] md:max-w-[445px]">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold ">
-          About Us
+          Create a plan
         </h1>
         <p className="opacity-80 text-sm lg:text-base mt-4">
-          Coffeeroasters began its journey of exotic discovery in 1999,
-          highlighting stories of coffee from around the world. We have since
-          been dedicated to bring the perfect cup - from bean to brew - in every
-          shipment.
+          Build a subscription plan that best fits your needs. We offer an
+                  assortment of the best artisan coffees 
+         from around the globe delivered
+          fresh to your door.
         </p>
       </div>
     </div>

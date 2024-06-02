@@ -4,7 +4,7 @@ import { whyChooseUsData } from "../constance";
 const WhyChooseUs = () => {
   return (
     <div className=" text-light_cream bg-dark_grey rounded-lg pt-16 pb-52  relative">
-      <div className="text-center max-w-[540px] mx-auto mb-16 md:mb-[70px]">
+      <div className="text-center max-w-[540px] mx-auto mb-16 md:mb-[70px] px-4">
         <h2 className="font-bold text-3xl lg:text-10">Why choose us?</h2>
         <p className="text-sm lg:text-base opacity-80 mt-6">
           A large part of our role is choosing which particular coffees will be

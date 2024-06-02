@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import hamburgerIcon from "../assets/shared/mobile/icon-hamburger.svg";
 import closeIcon from "../assets/shared/mobile/icon-close.svg";
@@ -20,6 +20,10 @@ const NavBar = () => {
     if (toggleNav) document.body.classList.add("disable-scroll");
     if (!toggleNav) document.body.classList.remove("disable-scroll");
   }, [toggleNav]);
+
+  const activeLink: React.CSSProperties = {
+    color: "#333D4B",
+  };
 
   return (
     <header>
@@ -47,19 +51,31 @@ const NavBar = () => {
              lg:space-x-8 text-grey uppercase font-bold"
         >
           <li>
-            <Link to="/" className="font-barlow hover:text-dark_grey">
+            <NavLink
+              style={({ isActive }) => (isActive ? activeLink : undefined)}
+              to="/"
+              className="font-barlow hover:text-dark_grey"
+            >
               home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="about" className="font-barlow hover:text-dark_grey">
+            <NavLink
+              style={({ isActive }) => (isActive ? activeLink : undefined)}
+              to="about"
+              className="font-barlow hover:text-dark_grey"
+            >
               about us
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="plan" className="font-barlow hover:text-dark_grey">
+            <NavLink
+              style={({ isActive }) => (isActive ? activeLink : undefined)}
+              to="plan"
+              className="font-barlow hover:text-dark_grey"
+            >
               create your plan
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

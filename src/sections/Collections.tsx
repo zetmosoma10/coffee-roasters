@@ -4,7 +4,7 @@ const Collections = () => {
   return (
     <div className=" text-center sm:text-left lg:text-center">
       <h2
-        className="font-bold text-center tracking-wide   text-3xl sm:text-8xl lg:text-[150px] bg-clip-text 
+        className="font-bold text-center tracking-wide   text-5xl sm:text-8xl lg:text-[150px] bg-clip-text 
       text-transparent gradient-text sm:mb-[-30px] whitespace-nowrap"
       >
         our collection
