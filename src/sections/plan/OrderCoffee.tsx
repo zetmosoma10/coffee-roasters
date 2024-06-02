@@ -5,6 +5,7 @@ import Input from "./Input";
 import Button from "../../components/Button";
 import Modal from "./Modal";
 import { TbRuler } from "react-icons/tb";
+import ListFormStats from "./ListFormStats";
 
 const OrderCoffee = () => {
   const [modalToggle, setModalToggle] = useState(false);
@@ -57,7 +58,7 @@ const OrderCoffee = () => {
   };
 
   return (
-    <div className="max-container grid border border-red-500">
+    <div className="max-container">
       {modalToggle && (
         <div className="absolute modal top-0 left-0 w-full h-full">
           <Modal
@@ -67,44 +68,47 @@ const OrderCoffee = () => {
           />
         </div>
       )}
-      <form onSubmit={handleSubmit} className="m-10 border">
-        {questionsData.map((item, index) => (
-          <div key={item.question} className="mb-24 md:mb-[100px] lg:mb-20">
-            <div
-              onClick={() => handleToggle(index)}
-              className="flex items-center justify-between gap-4"
-            >
-              <h3 className="font-bold text-grey text-2xl md:text-3xl lg:text-4xl cursor-pointer">
-                {item.question}
-              </h3>
-              <img
-                className={`${item.isOpen && "rotate-180"}`}
-                src={item.icon}
-                alt=""
-              />
-            </div>
-            {item.isOpen && (
-              <div className="flex items-center space-x-3">
-                {item.answers.map((data) => (
-                  <Input
-                    key={data.answer}
-                    handleChange={handleChange}
-                    inputName={data.type}
-                    inputValue={data.answer}
-                    checked={coffeeData[data.type] === data.answer}
-                  />
-                ))}
+      <div className=" grid lg:grid-custom gap-x-10">
+        <ListFormStats />
+        <form onSubmit={handleSubmit}>
+          {questionsData.map((item, index) => (
+            <div key={item.question} className="mb-24 md:mb-[100px] lg:mb-20">
+              <div
+                onClick={() => handleToggle(index)}
+                className="flex items-center justify-between gap-4"
+              >
+                <h3 className="font-bold text-grey text-2xl md:text-3xl lg:text-4xl cursor-pointer">
+                  {item.question}
+                </h3>
+                <img
+                  className={`${item.isOpen && "rotate-180"}`}
+                  src={item.icon}
+                  alt=""
+                />
               </div>
-            )}
+              {item.isOpen && (
+                <div className="flex items-center space-x-3">
+                  {item.answers.map((data) => (
+                    <Input
+                      key={data.answer}
+                      handleChange={handleChange}
+                      inputName={data.type}
+                      inputValue={data.answer}
+                      checked={coffeeData[data.type] === data.answer}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+          <OrderSummary coffeeData={coffeeData} />
+          <div className="flex justify-center lg:justify-end mt-14 md:mt-10">
+            <Button onClick={setModalOn} type="button">
+              Create your plan
+            </Button>
           </div>
-        ))}
-        <OrderSummary coffeeData={coffeeData} />
-        <div className="flex justify-center lg:justify-end mt-14 md:mt-10">
-          <Button onClick={setModalOn} type="button">
-            Create your plan
-          </Button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };

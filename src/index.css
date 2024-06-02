@@ -99,4 +99,9 @@
   .modal {
     background-color: rgba(0, 0, 0, 0.3);
   }
+
+  /* Grid */
+  .grid-custom {
+    grid-template-columns: 255px 1fr;
+  }
 }
