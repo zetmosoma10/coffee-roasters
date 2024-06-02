@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { coffeeQuestions } from "../../constance";
 import OrderSummary from "./OrderSummary";
 import Input from "./Input";
@@ -34,6 +34,11 @@ const OrderCoffee = () => {
       deliveries: "",
     });
   };
+
+  useEffect(() => {
+    if (modalToggle) document.body.classList.add("disable-scroll");
+    if (!modalToggle) document.body.classList.remove("disable-scroll");
+  }, [modalToggle]);
 
   const handleToggle = (index: number) => {
     return setQuestionsData((prevQuestionsData) => {

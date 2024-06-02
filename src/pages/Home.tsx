@@ -5,7 +5,7 @@ import WhyChooseUs from "../sections/WhyChooseUs";
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-container">
       <Hero />
       <div className="mt-[120px] md:mt-[98px] lg:mt-[136px]">
         <Collections />
