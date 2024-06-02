@@ -104,4 +104,21 @@
   .grid-custom {
     grid-template-columns: 255px 1fr;
   }
+
+  /* Custome Radio Input */
+  .custom-radio:checked + .custom-radio-label::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 2px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  .disable-scroll {
+    overflow: hidden;
+  }
 }
