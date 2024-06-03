@@ -97,14 +97,15 @@ const OrderCoffee = () => {
                 />
               </div>
               {item.isOpen && (
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col md:flex-row items-start space-y-3 md:space-y-0 md:space-x-6 mt-8">
                   {item.answers.map((data) => (
                     <Input
-                      key={data.answer}
+                      key={data.answer.name}
                       handleChange={handleChange}
                       inputName={data.type}
-                      inputValue={data.answer}
+                      inputValue={data.answer.name}
                       checked={coffeeData[data.type] === data.answer}
+                      label={data.answer}
                     />
                   ))}
                 </div>

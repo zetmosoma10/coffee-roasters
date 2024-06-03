@@ -98,9 +98,27 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "preferences", answer: "Capsule" },
-      { type: "preferences", answer: "Filter" },
-      { type: "preferences", answer: "Expresso" },
+      {
+        type: "preferences",
+        answer: {
+          name: "Capsule",
+          text: "Compatible with Nespresso systems and similar brewers",
+        },
+      },
+      {
+        type: "preferences",
+        answer: {
+          name: "Filter",
+          text: "For pour over or drip methods like Aeropress, Chemex, and V60",
+        },
+      },
+      {
+        type: "preferences",
+        answer: {
+          name: "Espresso",
+          text: "Dense and finely ground beans for an intense, flavorful experience",
+        },
+      },
     ],
   },
   {
@@ -108,9 +126,27 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "beanType", answer: "Single Origin" },
-      { type: "beanType", answer: "Decaf" },
-      { type: "beanType", answer: "Blended" },
+      {
+        type: "beanType",
+        answer: {
+          name: "Single Origin",
+          text: "Distinct, high quality coffee from a specific family-owned farm",
+        },
+      },
+      {
+        type: "beanType",
+        answer: {
+          name: "Decaf",
+          text: "Just like regular coffee, except the caffeine has been removed",
+        },
+      },
+      {
+        type: "beanType",
+        answer: {
+          name: "Blended",
+          text: "Combination of two or three dark roasted beans of organic coffeesd",
+        },
+      },
     ],
   },
   {
@@ -118,9 +154,27 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "quantity", answer: "250g" },
-      { type: "quantity", answer: "500g" },
-      { type: "quantity", answer: "1000g" },
+      {
+        type: "quantity",
+        answer: {
+          name: "250g",
+          text: "Perfect for the solo drinker. Yields about 12 delicious cups.",
+        },
+      },
+      {
+        type: "quantity",
+        answer: {
+          name: "500g",
+          text: "Perfect option for a couple. Yields about 40 delectable cups.",
+        },
+      },
+      {
+        type: "quantity",
+        answer: {
+          name: "1000g",
+          text: "Perfect for offices and events. Yields about 90 delightful cups.",
+        },
+      },
     ],
   },
   {
@@ -128,9 +182,27 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "grindOption", answer: "Wholebean" },
-      { type: "grindOption", answer: "Filter" },
-      { type: "grindOption", answer: "Cafetiére" },
+      {
+        type: "grindOption",
+        answer: {
+          name: "Wholebean",
+          text: "Best choice if you cherish the full sensory experience",
+        },
+      },
+      {
+        type: "grindOption",
+        answer: {
+          name: "Filter",
+          text: "For drip or pour-over coffee methods such as V60 or Aeropress",
+        },
+      },
+      {
+        type: "grindOption",
+        answer: {
+          name: "Cafetiére",
+          text: " Course ground beans specially suited for french press coffee",
+        },
+      },
     ],
   },
   {
@@ -138,9 +210,27 @@ export const coffeeQuestions = [
     icon: arrowDown,
     isOpen: false,
     answers: [
-      { type: "deliveries", answer: "Every week" },
-      { type: "deliveries", answer: "Every 2 weeks" },
-      { type: "deliveries", answer: "Every month" },
+      {
+        type: "deliveries",
+        answer: {
+          name: "Every week",
+          text: "$7.20 per shipment. Includes free first-class shipping.",
+        },
+      },
+      {
+        type: "deliveries",
+        answer: {
+          name: "Every 2 weeks",
+          text: "$9.60 per shipment. Includes free priority shipping.",
+        },
+      },
+      {
+        type: "deliveries",
+        answer: {
+          name: "Every month",
+          text: "$12.00 per shipment. Includes free priority shipping.",
+        },
+      },
     ],
   },
 ];
