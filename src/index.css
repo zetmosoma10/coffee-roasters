@@ -115,4 +115,43 @@
   .disable-scroll {
     overflow: hidden;
   }
+
+  .plan-steps-card {
+    background-image: url("./assets/plan/mobile/bg-steps.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
+
+  @media screen and (min-width: 768px) {
+    .plan-steps-card {
+      background-image: url("./assets/plan/tablet/bg-steps.png");
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .plan-steps-card {
+      background-image: url("./assets/plan/desktop/bg-steps.png");
+    }
+  }
+
+  .plan-order-summary {
+    background-image: url("./assets/plan/mobile/bg-order-summary.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .plan-order-summary {
+      background-image: url("./assets/plan/desktop/bg-order-summary.png");
+    }
+  }
+
+  .modal-top {
+    background-image: url("./assets/plan/desktop/bg-modal-top.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #333d4b;
+  }
 }

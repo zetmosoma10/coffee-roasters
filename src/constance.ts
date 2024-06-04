@@ -96,7 +96,7 @@ export const coffeeQuestions = [
   {
     question: "How do you drink your coffee?",
     icon: arrowDown,
-    isOpen: false,
+    isOpen: true,
     answers: [
       {
         type: "preferences",

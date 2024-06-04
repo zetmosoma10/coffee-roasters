@@ -11,7 +11,7 @@ interface Props {
 const OrderSummary = ({ coffeeData }: Props) => {
   return (
     <div
-      className="bg-dark_grey text-light_cream rounded-[10px] py-8 px-6 
+      className="plan-order-summary text-light_cream rounded-[10px] py-8 px-6 
         md:py-7 md:px-10 lg:px-16"
     >
       <span className="block text-sm lg:text-base opacity-50 uppercase">

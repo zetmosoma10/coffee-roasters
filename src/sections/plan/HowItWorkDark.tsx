@@ -3,7 +3,7 @@ import { dataProcedure } from "../../constance";
 const HowItWorkDark = () => {
   return (
     <div
-      className="bg-[#2c343e] text-light_cream text-center md:text-left
+      className="plan-steps-card text-light_cream text-center md:text-left
         rounded-[10px] py-20 md:py-24 "
     >
       <div className="max-container grid gap-y-14 md:gap-x-6 md:grid-cols-3 mt-[80px]">

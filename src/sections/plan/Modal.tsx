@@ -23,7 +23,7 @@ const Modal = ({ coffeeData, setModalOff, resetFormData }: Props) => {
       className="max-container rounded-[10px] overflow-hidden  bg-white 
       fixed top-[100px] left-0 right-0  mx-auto max-w-[540px] z-10"
     >
-      <header className="bg-dark_grey text-light_cream py-7 px-6">
+      <header className="modal-top text-light_cream py-7 px-6">
         <h2 className="font-bold text-3xl">Order Summary</h2>
       </header>
       <div className="mt-10 md:mt-14 px-6 pb-6 md:px-14 md:pb-14">
