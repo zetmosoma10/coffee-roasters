@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { coffeeQuestions } from "../../constance";
 import OrderSummary from "./OrderSummary";
-import Input from "./Input";
+import Input from "./components/Input";
 import Button from "../../components/Button";
-import Modal from "./Modal";
-import ListFormStats from "./ListFormStats";
+import ListFormStats from "./components/ListFormStats";
+import Modal from "./components/Modal";
 
 const OrderCoffee = () => {
   const [modalToggle, setModalToggle] = useState(false);

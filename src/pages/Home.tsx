@@ -1,7 +1,7 @@
-import Collections from "../sections/Collections";
-import Hero from "../sections/Hero";
-import HowItWork from "../sections/HowItWork";
-import WhyChooseUs from "../sections/WhyChooseUs";
+import Collections from "../sections/home/Collections";
+import Hero from "../sections/home/Hero";
+import HowItWork from "../sections/home/HowItWork";
+import WhyChooseUs from "../sections/home/WhyChooseUs";
 
 const Home = () => {
   return (

@@ -1,5 +1,5 @@
-import CardWhyChooseUs from "../components/CardWhyChooseUs";
-import { whyChooseUsData } from "../constance";
+import CardWhyChooseUs from "../../components/CardWhyChooseUs";
+import { whyChooseUsData } from "../../constance";
 
 const WhyChooseUs = () => {
   return (

@@ -1,5 +1,5 @@
-import Button from "../components/Button";
-import { dataProcedure } from "../constance";
+import Button from "../../components/Button";
+import { dataProcedure } from "../../constance";
 
 const HowItWork = () => {
   return (
