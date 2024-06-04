@@ -6,10 +6,39 @@ import Button from "../../components/Button";
 import ListFormStats from "./components/ListFormStats";
 import Modal from "./components/Modal";
 
+interface Question {
+  question: string;
+  icon: string;
+  isOpen: boolean;
+  answers: {
+    type: string;
+    answer: {
+      name: string;
+      text: string;
+    };
+  }[];
+}
+
+type CoffeeDataKeys =
+  | "preferences"
+  | "beanType"
+  | "quantity"
+  | "grindOption"
+  | "deliveries";
+
+interface CoffeeDataType {
+  preferences: string;
+  beanType: string;
+  quantity: string;
+  grindOption: string;
+  deliveries: string;
+}
+
 const OrderCoffee = () => {
-  const [modalToggle, setModalToggle] = useState(false);
-  const [questionsData, setQuestionsData] = useState(coffeeQuestions);
-  const [coffeeData, setCoffeeData] = useState({
+  const [modalToggle, setModalToggle] = useState<boolean>(false);
+  const [questionsData, setQuestionsData] =
+    useState<Question[]>(coffeeQuestions);
+  const [coffeeData, setCoffeeData] = useState<CoffeeDataType>({
     preferences: "",
     beanType: "",
     quantity: "",
@@ -60,7 +89,7 @@ const OrderCoffee = () => {
     setCoffeeData({
       ...coffeeData,
       [name]: value,
-    });
+    } as CoffeeDataType);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -104,7 +133,10 @@ const OrderCoffee = () => {
                       handleChange={handleChange}
                       inputName={data.type}
                       inputValue={data.answer.name}
-                      checked={coffeeData[data.type] === data.answer.name}
+                      checked={
+                        coffeeData[data.type as CoffeeDataKeys] ===
+                        data.answer.name
+                      }
                       label={data.answer}
                     />
                   ))}
