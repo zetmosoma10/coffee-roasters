@@ -1,4 +1,4 @@
-import Button from "../../components/Button";
+import Button from "../../../components/Button";
 
 interface Props {
   coffeeData: {
@@ -55,11 +55,15 @@ const Modal = ({ coffeeData, setModalOff, resetFormData }: Props) => {
           selection if something is off. Subscription discount codes can also be
           redeemed at the checkout.
         </p>
-        <div className="mt-6 space-x-4">
-          <span className="font-fraunces font-bold text-2xl lg:text-3xl ">
+        <div className="mt-6 space-x-4 text-center">
+          <span className="font-fraunces font-bold text-xl lg:text-3xl ">
             $14.00 / mo
           </span>
-          <Button onClick={handleClick} className="py-4 px-7" type="button">
+          <Button
+            onClick={handleClick}
+            className="py-1 px-4 lg:py-2"
+            type="button"
+          >
             Checkout
           </Button>
         </div>

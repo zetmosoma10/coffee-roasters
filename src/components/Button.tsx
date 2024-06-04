@@ -22,8 +22,8 @@ const Button = ({
     return (
       <Link
         to={to}
-        className={`${className} inline-block bg-dark_cyan font-fraunces bold 
-      text-light_cream py-4 px-8 rounded-[6px] hover:bg-[#66d2cf] focus:bg-[#66d2cf]`}
+        className={` inline-block bg-dark_cyan font-fraunces bold 
+      text-light_cream py-4 px-8 rounded-[6px] hover:bg-[#66d2cf] focus:bg-[#66d2cf] ${className}`}
       >
         {children}
       </Link>

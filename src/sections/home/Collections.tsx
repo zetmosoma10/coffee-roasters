@@ -1,4 +1,4 @@
-import { collectionData } from "../constance";
+import { collectionData } from "../../constance";
 
 const Collections = () => {
   return (
