@@ -107,9 +107,10 @@
 
   /* Custome Radio Input */
   /* Add this CSS to your stylesheet */
-  /* .custom-radio:checked + .custom-radio-label-container .custom-radio-label {
-    background-color: #ffd700; 
-  } */
+  .custom-radio:checked + .custom-radio-label-container .custom-radio-label {
+    background-color: #333d4b;
+    color: #fefcf7;
+  }
 
   .disable-scroll {
     overflow: hidden;

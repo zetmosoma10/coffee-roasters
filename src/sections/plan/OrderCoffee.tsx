@@ -104,7 +104,7 @@ const OrderCoffee = () => {
                       handleChange={handleChange}
                       inputName={data.type}
                       inputValue={data.answer.name}
-                      checked={coffeeData[data.type] === data.answer}
+                      checked={coffeeData[data.type] === data.answer.name}
                       label={data.answer}
                     />
                   ))}
