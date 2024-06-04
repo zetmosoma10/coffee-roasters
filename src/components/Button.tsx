@@ -5,6 +5,7 @@ interface Props {
   children: ReactNode;
   className?: string;
   type?: string;
+  to?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
 }
@@ -14,12 +15,13 @@ const Button = ({
   className,
   onClick,
   disabled,
+  to = "plan",
   type = "link",
 }: Props) => {
   if (type === "link")
     return (
       <Link
-        to="plan"
+        to={to}
         className={`${className} inline-block bg-dark_cyan font-fraunces bold 
       text-light_cream py-4 px-8 rounded-[6px] hover:bg-[#66d2cf] focus:bg-[#66d2cf]`}
       >

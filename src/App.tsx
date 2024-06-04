@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Plan from "./pages/Plan";
 import ScrollToTop from "./components/ScrollToTop";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="plan" element={<Plan />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
